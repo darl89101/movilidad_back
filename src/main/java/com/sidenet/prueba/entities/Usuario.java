@@ -18,24 +18,24 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	@Column(name = "username")
-	private String username;
+	@Column(name = "user_name")
+	private String user_name;
 	@Column(name = "password")
 	private String password;
-	@Column(name = "fullname")
-	private String fullname;
+	@Column(name = "full_name")
+	private String full_name;
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getUsername() {
-		return username;
+	public String getUser_name() {
+		return user_name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
 	public String getPassword() {
 		return password;
@@ -43,10 +43,11 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getFullname() {
-		return fullname;
+	public String getFull_name() {
+		return full_name;
 	}
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
-	}	
+	public void setFull_name(String full_name) {
+		this.full_name = full_name;
+	}
+	
 }

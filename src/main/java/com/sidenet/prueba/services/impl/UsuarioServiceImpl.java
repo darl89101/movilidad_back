@@ -29,7 +29,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public Usuario crear(Usuario usuario) throws Exception {
 
-		Optional<Usuario> u = usuarioRepository.findByUsername(usuario.getUsername());
+		Optional<Usuario> u = usuarioRepository.findByUser_name(usuario.getUser_name());
 		
 		if (!u.isPresent()) {
 			throw new Exception("Ya existe un usuario con el mismo username");

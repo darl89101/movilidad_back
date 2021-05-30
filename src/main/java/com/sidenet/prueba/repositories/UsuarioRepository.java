@@ -7,8 +7,10 @@ import com.sidenet.prueba.entities.Usuario;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
-	Optional<Usuario> findByUsername(String username);
+	 @Query("from Usuario where user_name = ?1")
+	 Optional<Usuario> findByUser_name(String user_name);
 }
